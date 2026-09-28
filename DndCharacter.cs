@@ -68,7 +68,10 @@ namespace Dnd
         }
 
         //конструктор без з пораметрами 
-        public DndCharacter(){}
+        public DndCharacter()
+        {
+            name = "";
+        }
 
         public DndCharacter(string name, CharacterClass charClass, int level, int helth)
         {

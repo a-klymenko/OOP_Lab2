@@ -17,7 +17,7 @@ namespace Dnd
             try
             {
                 Console.Write("ім'я персонажа: ");
-                hero.Name=Console.ReadLine();
+                hero.Name= Console.ReadLine()??"";
                 break;
             }
             catch (Exception ex)
@@ -107,9 +107,9 @@ namespace Dnd
         public void FindCheracter()
         {
             Console.WriteLine("Введіть ім'я розшукуємого: ");
-            string searchName=Console.ReadLine();
+            string? searchName=Console.ReadLine();
 
-            DndCharacter found=characters.Find(c=>c.Name.Equals(searchName, StringComparison.OrdinalIgnoreCase)); //все одно, мала велика
+            DndCharacter? found=characters.Find(c=>c.Name.Equals(searchName, StringComparison.OrdinalIgnoreCase)); //все одно, мала велика
             if (found != null)
             {
                 Console.WriteLine($"Знайдено: {found}");
@@ -141,9 +141,9 @@ namespace Dnd
         public void DeleteCharacter()
         {
             Console.Write("Введіть ім'я для видалення: ");
-            string searchName = Console.ReadLine();
+            string? searchName = Console.ReadLine();
 
-            DndCharacter found = characters.Find(c => c.Name.Equals(searchName, StringComparison.OrdinalIgnoreCase));
+            DndCharacter? found = characters.Find(c => c.Name.Equals(searchName, StringComparison.OrdinalIgnoreCase));
             if (found != null)
             {
                 characters.Remove(found);

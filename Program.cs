@@ -22,7 +22,7 @@ namespace Dnd
                 Console.WriteLine("0 – Вийти з програми");
                 Console.Write("Ваш вибір: ");
 
-                string choice = Console.ReadLine();
+                string? choice = Console.ReadLine();
 
                 switch (choice)
                 {
